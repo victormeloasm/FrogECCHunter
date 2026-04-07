@@ -630,3 +630,5 @@ MIT
 FrogECCHunter is strongest when it is treated as a disciplined forensic tool rather than as a black box. Feed it honest artifacts. Read the reports carefully. Distinguish recoverability from structural risk. Preserve evidence. Keep the workflows reproducible.
 
 That is the entire point of this project.
+
+Made by Victor Duarte Melo with ♡
