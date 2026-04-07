@@ -1,0 +1,252 @@
+FrogECCHunter self-test manifest
+version = v30
+audit_dir = AUDITTEST
+case_count = 25
+
+[CASE] invalid_pubkey_preserved.json
+  source_kind = pem:PUBLIC KEY
+  normalized_input_kind = sec1_compressed
+  analysis_path = passive_parse_preserved
+  public_key_parsed = no
+  total_checks = 348
+  hit_count = 0
+  why_no_recovery = public key did not parse algebraically; only passive parser/oracle/provenance checks could run
+  parse_error = failed to decompress public key
+
+[CASE] pubkey_from_compressed_secp256k1.json
+  source_kind = text
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 1
+  why_no_recovery = recovery demonstrated
+  primary_hit = tiny_public_key_multiple_scan | critical
+
+[CASE] pubkey_from_pem_auto_secp256k1.json
+  source_kind = pem:PUBLIC KEY
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 1
+  why_no_recovery = recovery demonstrated
+  primary_hit = tiny_public_key_multiple_scan | critical
+
+[CASE] pubkey_from_pem_auto_secp256r1.json
+  source_kind = pem:PUBLIC KEY
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 0
+  why_no_recovery = no signatures were supplied, so nonce and signature-recovery engines stayed inactive
+
+[CASE] pubkey_from_uncompressed_secp256k1.json
+  source_kind = text
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 1
+  why_no_recovery = recovery demonstrated
+  primary_hit = tiny_public_key_multiple_scan | critical
+
+[CASE] raw_family_ed25519.json
+  source_kind = text
+  normalized_input_kind = raw_hex
+  analysis_path = passive_family
+  public_key_parsed = no
+  total_checks = 348
+  hit_count = 0
+  why_no_recovery = public key did not parse algebraically; only passive parser/oracle/provenance checks could run
+  parse_error = public key parsing for this family is passive-only in the active algebra engine
+
+[CASE] raw_family_x25519.json
+  source_kind = text
+  normalized_input_kind = raw_hex
+  analysis_path = passive_family
+  public_key_parsed = no
+  total_checks = 348
+  hit_count = 0
+  why_no_recovery = public key did not parse algebraically; only passive parser/oracle/provenance checks could run
+  parse_error = public key parsing for this family is passive-only in the active algebra engine
+
+[CASE] backend_differential_findings.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 21
+  why_no_recovery = no signatures were supplied, so nonce and signature-recovery engines stayed inactive
+  primary_hit = backend_invalid_curve_rejection_differential | critical
+
+[CASE] device_identifier_seeded_nonce.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 4
+  why_no_recovery = recovery demonstrated
+  primary_hit = device_identifier_seeded_nonce_scan | critical
+
+[CASE] ecdh_oracle_validation_failures.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 32
+  why_no_recovery = no signatures were supplied, so nonce and signature-recovery engines stayed inactive
+  primary_hit = cross_protocol_scalar_reuse | critical
+
+[CASE] high_s_malleability.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 1
+  why_no_recovery = current artifacts did not demonstrate a recoverable weakness
+  primary_hit = high_s_malleability_acceptance | medium
+
+[CASE] invalid_pubkey_template_playground.json
+  source_kind = pem:PUBLIC KEY
+  normalized_input_kind = sec1_compressed
+  analysis_path = passive_parse_preserved
+  public_key_parsed = no
+  total_checks = 348
+  hit_count = 0
+  why_no_recovery = public key did not parse algebraically; only passive parser/oracle/provenance checks could run
+  parse_error = failed to decompress public key
+
+[CASE] nonce_reuse_exact.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 8
+  why_no_recovery = recovery demonstrated
+  primary_hit = exact_nonce_reuse | critical
+
+[CASE] parser_and_binding_smells.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 10
+  why_no_recovery = no signatures were supplied, so nonce and signature-recovery engines stayed inactive
+  primary_hit = device_identifier_seeded_nonce | critical
+
+[CASE] prng_and_parser_smells.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 4
+  why_no_recovery = no signatures were supplied, so nonce and signature-recovery engines stayed inactive
+  primary_hit = nonce_source_pcg32 | high
+
+[CASE] raw_family_ed25519_playground.json
+  source_kind = json_embedded
+  normalized_input_kind = raw_hex
+  analysis_path = passive_family
+  public_key_parsed = no
+  total_checks = 348
+  hit_count = 0
+  why_no_recovery = public key did not parse algebraically; only passive parser/oracle/provenance checks could run
+  parse_error = public key parsing for this family is passive-only in the active algebra engine
+
+[CASE] raw_family_x448_playground.json
+  source_kind = json_embedded
+  normalized_input_kind = raw_hex
+  analysis_path = passive_family
+  public_key_parsed = no
+  total_checks = 348
+  hit_count = 0
+  why_no_recovery = public key did not parse algebraically; only passive parser/oracle/provenance checks could run
+  parse_error = public key parsing for this family is passive-only in the active algebra engine
+
+[CASE] related_nonce_delta1.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 2
+  why_no_recovery = recovery demonstrated
+  primary_hit = related_nonce_delta_scan | critical
+
+[CASE] small_nonce_30bit.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 1
+  why_no_recovery = recovery demonstrated
+  primary_hit = small_nonce_bsgs | critical
+
+[CASE] small_private_key_20bit.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 4
+  why_no_recovery = recovery demonstrated
+  primary_hit = small_private_key_bsgs | critical
+
+[CASE] v20_structural_suite.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 111
+  why_no_recovery = no signatures were supplied, so nonce and signature-recovery engines stayed inactive
+  primary_hit = all_zero_shared_secret_acceptance | critical
+
+[CASE] v22_spki_backend_suite.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 12
+  why_no_recovery = no signatures were supplied, so nonce and signature-recovery engines stayed inactive
+  primary_hit = backend_explicit_curve_parameter_differential | high
+
+[CASE] valid_pubkey_secp256k1_1337.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 1
+  why_no_recovery = recovery demonstrated
+  primary_hit = tiny_public_key_multiple_scan | critical
+
+[CASE] valid_pubkey_secp256k1_clean.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 0
+  why_no_recovery = no signatures were supplied, so nonce and signature-recovery engines stayed inactive
+
+[CASE] valid_pubkey_secp256r1_clean.json
+  source_kind = json_embedded
+  normalized_input_kind = sec1_compressed
+  analysis_path = active_algebra
+  public_key_parsed = yes
+  total_checks = 348
+  hit_count = 0
+  why_no_recovery = no signatures were supplied, so nonce and signature-recovery engines stayed inactive
+
