@@ -1,0 +1,6 @@
+FrogECCHunter v30
+
+- fixed release metadata drift so reports, SARIF, evidence packs, and batch summaries all identify v30 consistently
+- strengthened --self-test with built-in pubkey-to-JSON conversion checks across compressed, uncompressed, PEM/SPKI, raw-family, and invalid-preserved inputs
+- added new playground JSON samples for parser, passive-family, and small-key experiments
+- kept the 348-check catalog intact while improving packaging cleanliness and client-facing compatibility

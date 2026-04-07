@@ -1,0 +1,119 @@
+PROJECT := fecchunter
+CXX := clang++
+LD := clang++
+BUILD_DIR := build
+SRC_DIR := src
+SOURCES := $(wildcard $(SRC_DIR)/*.cpp)
+OBJECTS := $(patsubst $(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(SOURCES))
+DEPS := $(OBJECTS:.o=.d)
+BIN := $(PROJECT)
+
+CPPFLAGS := -MMD -MP
+WARNFLAGS := -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wformat=2 -Wcast-qual -Wundef -Wnull-dereference -Wno-unused-parameter -Wno-sign-conversion
+OMP_CXXFLAGS ?= -fopenmp=libgomp
+OMP_LDLIBS ?= -lgomp
+CXXFLAGS := -std=c++23 -DNDEBUG $(WARNFLAGS) -O2 -pipe $(OMP_CXXFLAGS)
+LDFLAGS := -fuse-ld=lld $(OMP_CXXFLAGS)
+LDLIBS := -lgmpxx -lgmp $(OMP_LDLIBS)
+
+.PHONY: all ultra re clean distclean print-flags test-small test-related test-reuse test-priv test-ecdh test-affine test-time test-highs test-counter test-findings test-batch test-report test-template test-verbose test-lcg test-rand15 test-hashcounter test-splitmix test-pcg32 test-hashtime test-v12smells
+.NOTPARALLEL: ultra re
+
+all: $(BIN)
+
+ultra:
+	$(MAKE) clean
+	$(MAKE) all
+
+re: ultra
+
+$(BIN): $(OBJECTS)
+	$(LD) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp | $(BUILD_DIR)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
+
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
+
+test-small: $(BIN)
+	./$(BIN) --all samples/small_nonce_30bit.json
+
+test-related: $(BIN)
+	./$(BIN) --all samples/related_nonce_delta1.json
+
+test-reuse: $(BIN)
+	./$(BIN) --all samples/nonce_reuse_exact.json
+
+test-priv: $(BIN)
+	./$(BIN) --all samples/small_private_key_20bit.json
+
+test-ecdh: $(BIN)
+	./$(BIN) --all samples/ecdh_oracle_validation_failures.json
+
+
+test-affine: $(BIN)
+	./$(BIN) --all samples/affine_nonce_relation.json
+
+test-time: $(BIN)
+	./$(BIN) --all samples/unix_time_scalar_nonce.json
+
+test-highs: $(BIN)
+	./$(BIN) --all samples/high_s_malleability.json
+
+test-counter: $(BIN)
+	./$(BIN) --all samples/counter_nonce_smells.json
+
+test-findings: $(BIN)
+	./$(BIN) --all samples/ecdh_offline_findings_bundle.json
+
+test-verbose: $(BIN)
+	./$(BIN) --all samples/related_nonce_delta1.json --verbose
+
+test-batch: $(BIN)
+	./$(BIN) --all-dir samples --report-dir build/reports
+
+test-lcg: $(BIN)
+	./$(BIN) --all samples/lcg_raw_state_nonce.json
+
+test-rand15: $(BIN)
+	./$(BIN) --all samples/c_rand15_nonce.json
+
+test-hashcounter: $(BIN)
+	./$(BIN) --all samples/message_hash_plus_counter_nonce.json
+
+test-report: $(BIN)
+	./$(BIN) --all samples/related_nonce_delta1.json --report-json build/report.json && cat build/report.json
+
+test-template: $(BIN)
+	./$(BIN) --make-json-from-pubkey secp256k1 0272588CF4BC7FB52A68D5C81B83643A96A881ACFD9359D268BF675C0173B46920 build/from_pubkey.json && cat build/from_pubkey.json
+
+print-flags:
+	@echo "CXX      = $(CXX)"
+	@echo "LD       = $(LD)"
+	@echo "CPPFLAGS = $(CPPFLAGS)"
+	@echo "CXXFLAGS = $(CXXFLAGS)"
+	@echo "LDFLAGS  = $(LDFLAGS)"
+	@echo "LDLIBS   = $(LDLIBS)"
+
+clean:
+	rm -rf $(BUILD_DIR) $(BIN)
+
+distclean: clean
+	rm -f $(DEPS)
+
+-include $(DEPS)
+
+
+test-splitmix: $(BIN)
+	./$(BIN) --all samples/splitmix64_nonce.json
+
+test-pcg32: $(BIN)
+	./$(BIN) --all samples/pcg32_nonce.json
+
+test-hashtime: $(BIN)
+	./$(BIN) --all samples/message_hash_plus_time_nonce.json
+	./$(BIN) --all samples/message_hash_xor_time_nonce.json
+
+test-v12smells: $(BIN)
+	./$(BIN) --all samples/v12_rng_oracle_smells.json
