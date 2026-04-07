@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "title": "Valid secp256k1 tiny-range keygen playground (d=1337)",
+  "mode": "parser",
+  "curve": {
+    "name": "secp256k1",
+    "family": "short_weierstrass"
+  },
+  "public_key": {
+    "compressed": "02DB0C51CC634A4096374B0B895584A3CA2FB3BEA4FD0EE2361F8DB63A650FCEE6",
+    "x": "DB0C51CC634A4096374B0B895584A3CA2FB3BEA4FD0EE2361F8DB63A650FCEE6",
+    "y": "7EC0BD2BAEA1AE184BD16FD397B0E64D5D28257F85836486367FE33CC5B6E6A0"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "template.kind": "playground_valid_pubkey",
+    "curve.family": "short_weierstrass"
+  },
+  "signatures": []
+}

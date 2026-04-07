@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "title": "Invalid preserved pubkey playground",
+  "mode": "parser",
+  "curve": {
+    "name": "secp256k1",
+    "family": "short_weierstrass"
+  },
+  "public_key": {
+    "compressed": "020000000000000000000000000000000000000000000000000000000000000005",
+    "source_kind": "pem:PUBLIC KEY"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "template.kind": "invalid_pubkey_preserved",
+    "parser.invalid_pubkey_template": true,
+    "parser.input_source_kind": "pem:PUBLIC KEY",
+    "curve.family": "short_weierstrass"
+  },
+  "signatures": []
+}

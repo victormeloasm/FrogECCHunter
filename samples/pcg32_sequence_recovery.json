@@ -1,0 +1,36 @@
+{
+  "title": "PCG32 sequence used for two ECDSA nonces",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02954851B53E26C7816707A35B726754CC328FC26351EB676EA3BB0B55842AFDE0"
+  },
+  "facts": {
+    "rng": {
+      "generator": "pcg32_sequence",
+      "seed_min": "7000",
+      "seed_max": "7400",
+      "discard_outputs": "1",
+      "source": "pcg32"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "PCG32 stream first nonce sample.",
+      "hash_hex": "81FA698BF96DC87229DD2512DF0B8F456B8A94E6075D4406127676D28232A3B",
+      "r": "DF0B9FFF2DBAB3990741A7060C3B91F8C035191D9C865D364138C2FFD770FD99",
+      "s": "3A1AC37CB632F8335C84907D1852048B9D48760D11716329E54A0C5667F50B07"
+    },
+    {
+      "message": "PCG32 stream second nonce sample.",
+      "hash_hex": "B3E658461C8E553195B361E7E67C50DABE452AD95DD32DFD0072E35C0605894D",
+      "r": "AAA0618FEEF5BB88341870826D652C9B425791131E3F195162142CA29CDBFE4E",
+      "s": "66E38F7E59040F2871325F6522FEA6E86A399B59B99456AD479E008A3F821BD3"
+    }
+  ]
+}

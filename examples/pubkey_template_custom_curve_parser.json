@@ -1,0 +1,30 @@
+{
+  "title": "Challenge skeleton generated from a supplied public key",
+  "mode": "parser",
+  "curve": {
+    "name": "custom",
+    "family": "short_weierstrass"
+  },
+  "public_key": {
+    "compressed": "0272588CF4BC7FB52A68D5C81B83643A96A881ACFD9359D268BF675C0173B46920",
+    "x": "72588CF4BC7FB52A68D5C81B83643A96A881ACFD9359D268BF675C0173B46920",
+    "y": "D0AB304DCA09F7327FF1C36C0268E76D67C528C1AD69708927C4D20A80F10ADA"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "template.kind": "generated_from_valid_pubkey",
+    "curve.family": "short_weierstrass",
+    "runtime.backend": "openssl",
+    "runtime.diff_backends": "openssl,libsecp256k1"
+  },
+  "signatures": [
+  ]
+}

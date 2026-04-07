@@ -1,0 +1,29 @@
+{
+  "title": "Raw SplitMix64 output used as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0372588CF4BC7FB52A68D5C81B83643A96A881ACFD9359D268BF675C0173B46920"
+  },
+  "facts": {
+    "rng": {
+      "generator": "splitmix64",
+      "seed_min": "422242",
+      "seed_max": "426242",
+      "source": "splitmix64"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce came from raw SplitMix64 output.",
+      "hash_hex": "A9693CAE17DB935D4B9E91823943A166937D9E4A640A47400248FCA31F4ECA17",
+      "r": "A4BF9AC36744768256C5FA7603D09A703F60D0B3507698EC44A0A85B5A3B9533",
+      "s": "038A4116DD5DEAA6DAD82F7A9A0531EFBD87E38423819FED6FCE16C91D819B1D"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Unix time plus PID used directly as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0328F1DA21419E50510D85E8D1BB465F54A3088BA63EC7984C20CA3DD747287DB7"
+  },
+  "constraints": {
+    "unix_time_min": 1712345700,
+    "unix_time_max": 1712345900
+  },
+  "facts": {
+    "rng": {
+      "generator": "unix_time_plus_pid",
+      "pid": "4242",
+      "seed": "time"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    },
+    "key": {
+      "source": "predictable_seed"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce was generated from time plus PID.",
+      "hash_hex": "04DBF177DD51AA6F96507C24CDB2857934B470C1E444FC860C288F3A701BF88F",
+      "r": "C94EB28226EF8A3559BA89617AAC27C825BE494BDF0308D5F33A548A322A5D66",
+      "s": "06CBFBC6942A79106CBB7E59110051628D40E9CCB982B5D83C83E247FFBC27AC"
+    }
+  ]
+}

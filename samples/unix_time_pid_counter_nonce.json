@@ -1,0 +1,36 @@
+{
+  "title": "Unix time plus PID plus counter used directly as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "034F92A8384D26604269ECDF359A3E79482E7EBB2496F31AC283E320E0CC39C9D1"
+  },
+  "constraints": {
+    "unix_time_min": 1712345800,
+    "unix_time_max": 1712346000
+  },
+  "facts": {
+    "rng": {
+      "generator": "unix_time_pid_counter",
+      "pid": "4242",
+      "counter_min": "0",
+      "counter_max": "20"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    },
+    "key": {
+      "source": "predictable_seed"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce was time plus PID plus a tiny counter.",
+      "hash_hex": "0ECF1FF8B021A92B5D555FDF105E09489FD3BC64DAB2FEE28F1F4B890C9A2201",
+      "r": "41555FCE9FDF73B7BA3530EB854483F2902598045F02B21D2DD1D27FDFC4FD34",
+      "s": "A374E351393AEFBB56C429B1FF0E004D21BB694A89964CBA4DD011D71EE84F9C"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "SplitMix64 output XOR a tiny counter used as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02CC1BD23237B6FB1CC002137D131A81D3D60C23F23EF35EDB2DC156DAD686B8CB"
+  },
+  "facts": {
+    "rng": {
+      "generator": "splitmix64_xor_counter",
+      "seed_min": "424210",
+      "seed_max": "424274",
+      "counter_min": "0",
+      "counter_max": "64",
+      "source": "splitmix64"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "SplitMix64 xor counter v17 sample",
+      "hash_hex": "FD120A23F353C95C0B7267F613ABEA5F8938EFB4D455EAB03D2F302A481DE78B",
+      "r": "D62A852D5604EE79963FD402E548ED1047A2BCC2C8C86E406CF170B6FBFD9451",
+      "s": "0E07583E9FFB50F4DA59EFA21EA94B067A8CEC3F6E6E942DAD063155DE2FB4B6"
+    }
+  ]
+}

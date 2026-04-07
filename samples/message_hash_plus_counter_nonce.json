@@ -1,0 +1,31 @@
+{
+  "title": "Message hash plus counter used as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "03F792503321417AB16E05BFFC47CC020B5737B315B34B738443756CD58B1F005C"
+  },
+  "facts": {
+    "rng": {
+      "generator": "message_hash_plus_counter",
+      "counter_min": "3742",
+      "counter_max": "4742"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    },
+    "protocol": {
+      "domain_separation": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce was hash(message) plus a tiny counter.",
+      "hash_hex": "154E24EB4F85A2221B7761C6E942C78A2074309960C7A967832444D5A1D4C80F",
+      "r": "166FA4F911563D288A6BF652514FCBFEC6D12302FEDFE2861A5685A824CF3BFB",
+      "s": "FCE61DE3AF7AE90631778C7E2D1FABE9A3AA6DD45A8FB5E24D30D10F2F271C3B"
+    }
+  ]
+}

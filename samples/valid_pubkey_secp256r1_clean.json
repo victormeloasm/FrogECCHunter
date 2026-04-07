@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "title": "Valid secp256r1 public key only (clean parser playground, no tiny-range key)",
+  "mode": "parser",
+  "curve": {
+    "name": "secp256r1",
+    "family": "short_weierstrass"
+  },
+  "public_key": {
+    "compressed": "02E2967FF50548977BF8108F8F39D0DB607DAD59D2B7870AFDB9A6E38CACA1638C",
+    "x": "E2967FF50548977BF8108F8F39D0DB607DAD59D2B7870AFDB9A6E38CACA1638C",
+    "y": "E83598DEEAE1D501C0EEC7DCF9F6823DA4AD414004536D98C1C06304DEB53F44"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "template.kind": "playground_valid_pubkey",
+    "curve.family": "short_weierstrass"
+  },
+  "signatures": []
+}

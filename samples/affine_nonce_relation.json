@@ -1,0 +1,36 @@
+{
+  "title": "Affine nonce relation k2 = 3*k1 + 17",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02F707008EF4087715B13ED73C988AF72DCF80BE1AA2746FDF016CA589C16B8FD3",
+    "x": "F707008EF4087715B13ED73C988AF72DCF80BE1AA2746FDF016CA589C16B8FD3",
+    "y": "8B4DA32B0A32727F7B266F3B04F36D8610B1C972FA783E5E22D66E9F00A42E9E"
+  },
+  "constraints": {
+    "related_delta_max": 0,
+    "related_a_abs_max": 4,
+    "related_b_abs_max": 64
+  },
+  "facts": {
+    "rng.source": "counter",
+    "nonce.rfc6979": "false",
+    "protocol.domain_separation": "false"
+  },
+  "signatures": [
+    {
+      "message": "The safe is hidden beneath the chapel floor.",
+      "hash_hex": "8BB418C9946678C97007864102980533A92FD5003FD765AEC85AF6783E4EE53E",
+      "r": "085D77A89C0FC7B307C0F75EDC54A78E3CD7DE9C1D5345EBB037FC3ECDF7FEFD",
+      "s": "971C0E198F25E0E8C4723809AF22786E47FFEB1EB53D6252A06F80502FC6BCCA"
+    },
+    {
+      "message": "The lantern code changes exactly at sunrise.",
+      "hash_hex": "4360B8167F229855CB917972461EC8FB5F74D18B0FF059E2556D49C6776E3F58",
+      "r": "5A9C20C36597B0BCAA9B06497D6DA40E27FFEC026B27DC71AAFDF6DC64662B0C",
+      "s": "F6B39D6959C7721679D171BC9B58227D7FB21916515E39ADF03CBA5584C1BAE2"
+    }
+  ]
+}

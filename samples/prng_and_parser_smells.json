@@ -1,0 +1,25 @@
+{
+  "title": "PRNG and parser smell bundle",
+  "mode": "ecdh_oracle",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "03896B4FEB7C8298DD48D222F8AFC8955B62FEF6FBC580B65423AC14706504840C"
+  },
+  "facts": {
+    "rng": {
+      "source": "pcg32"
+    },
+    "parser": {
+      "accept_trailing_garbage": "true"
+    },
+    "verification": {
+      "scalar_range_check": "false"
+    },
+    "protocol": {
+      "signature_context_reuse": "true"
+    }
+  },
+  "signatures": []
+}

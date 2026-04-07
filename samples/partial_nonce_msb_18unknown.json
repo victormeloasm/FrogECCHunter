@@ -1,0 +1,30 @@
+{
+  "title": "Partial high-bit nonce leakage",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "039FF07F4D45E610A56F9FF8A0FE738FC9FC6E74C14BE6A2A1FE100A8F2D0E7D8A"
+  },
+  "facts": {
+    "nonce": {
+      "leak": {
+        "msb_bits": "20",
+        "msb_value": "703710",
+        "unknown_bits": "14"
+      }
+    },
+    "rng": {
+      "generator": "partial_msb_leak_demo"
+    }
+  },
+  "signatures": [
+    {
+      "message": "High bits of the nonce leaked through a side channel.",
+      "hash_hex": "DFEE97AC6EAFD901A5CBA62A72D1EB7E15AF2C9550E8E66C7BBCDC29E488A2C7",
+      "r": "5E6FFA9F7ADFA808C86E2375CE7BCD579852842DBDF354E3EBB555DE40EBC6FA",
+      "s": "0578AC224AECF62D8052A663F91F4935B06FB0D69F989916735CD471F8110A2B"
+    }
+  ]
+}

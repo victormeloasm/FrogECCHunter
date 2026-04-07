@@ -1,0 +1,35 @@
+{
+  "title": "Raw LCG state used directly as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02F707008EF4087715B13ED73C988AF72DCF80BE1AA2746FDF016CA589C16B8FD3"
+  },
+  "facts": {
+    "rng": {
+      "generator": "lcg_raw_state",
+      "source": "lcg",
+      "seed_min": "424192",
+      "seed_max": "424292",
+      "lcg": {
+        "a": "1103515245",
+        "c": "12345",
+        "m": "2147483648"
+      },
+      "discard_outputs": "0"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce came straight from the raw LCG state.",
+      "hash_hex": "7EB0CE1389C141CCEE95A74391B6B6FC261D5B8687C6948C50AA5C197F9199D4",
+      "r": "061080E6076DEF6FCC65A0753DD6018572E1F00C2464113334F6487378ADDD34",
+      "s": "A4ACDB42863B99AA6AED6E77D08B6646C97EB6C7255A794E4324A9CEDF63DF29"
+    }
+  ]
+}

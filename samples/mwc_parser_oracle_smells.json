@@ -1,0 +1,24 @@
+{
+  "title": "MWC1616 and parser oracle smell bundle",
+  "mode": "ecdh_oracle",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0328F1DA21419E50510D85E8D1BB465F54A3088BA63EC7984C20CA3DD747287DB7"
+  },
+  "facts": {
+    "rng": {
+      "source": "mwc1616"
+    },
+    "parser": {
+      "accept_signed_hex": "true"
+    },
+    "oracle": {
+      "mac_validity": "true"
+    },
+    "validation": {
+      "subgroup_order_checked": "false"
+    }
+  }
+}

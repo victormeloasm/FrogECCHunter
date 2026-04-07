@@ -1,0 +1,26 @@
+{
+  "title": "Counter-based nonce generation smell bundle",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02A47615D035E0E63DF6F3152EDEEA400EA4E3CB4CB88315DC0F244D6FA0C19F95",
+    "x": "A47615D035E0E63DF6F3152EDEEA400EA4E3CB4CB88315DC0F244D6FA0C19F95",
+    "y": "F2EC31B4652ABFC56D6308BE1D693E77956A733D2073685B9E4DA1A1B2501CDE"
+  },
+  "signatures": [
+    {
+      "message": "Counter-based nonce generation should never exist.",
+      "hash_hex": "7A8938CE205BDB7248EBB6182AE913FC5F842544B69ECFEC1418D093BAEA436F",
+      "r": "E9A2463C5ECAAAAC49DC3AC382CAE02CEC513D342EE9A6C18E842C344F7B2BFB",
+      "s": "D565EB21B6862AC774095E3B5C6737971DC93159440D01F60B0304AFBDBD8A19"
+    }
+  ],
+  "facts": {
+    "rng.generator": "global_counter",
+    "rng.reseed_every_signature": "true",
+    "rng.custom_without_health_tests": "true",
+    "rng.message_only": "false"
+  }
+}

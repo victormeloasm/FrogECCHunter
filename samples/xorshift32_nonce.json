@@ -1,0 +1,37 @@
+{
+  "title": "Xorshift32 used directly for the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "031EBC2DADFE75BE6A27D85F2A264E8DE339527D12731195E7B37B9F6793124928",
+    "x": "1EBC2DADFE75BE6A27D85F2A264E8DE339527D12731195E7B37B9F6793124928",
+    "y": "D1A0AC468C183C1EAB365C1E5425E8E6F9995DFEFA23DA71EC003B57D9AD2AB1"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "rng": {
+      "generator": "xorshift32",
+      "seed_min": 424192,
+      "seed_max": 424292,
+      "discard_outputs": 0
+    }
+  },
+  "signatures": [
+    {
+      "message": "The blue folder stays under the left drawer.",
+      "hash_hex": "D558BC417675A32BF81EB2490D92EB1B890F3C5012E045595AE797AE7BEF6747",
+      "r": "5EED69BD9246F911F81457C6F396B0D6B723971868248E27BCA35E9465327365",
+      "s": "C7AB15086961318575C468D5505F045FBADE5CD39208AB124D0D2058B95B5674"
+    }
+  ]
+}

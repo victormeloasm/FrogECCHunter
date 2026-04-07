@@ -1,0 +1,35 @@
+{
+  "title": "C rand()-style 15-bit output used as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "03307884246D52E95CB63EFFC47F67CF6C12B33A0A0D8F323DA290576E456231C9"
+  },
+  "facts": {
+    "rng": {
+      "generator": "c_rand15",
+      "source": "rand",
+      "seed_min": "1137",
+      "seed_max": "1537",
+      "lcg": {
+        "a": "1103515245",
+        "c": "12345",
+        "m": "2147483648"
+      },
+      "discard_outputs": "0"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce came from a tiny rand() style output.",
+      "hash_hex": "7503EF5E7234624E817220C98CF69B1AF79531A62342F81EFB9EC4952A363960",
+      "r": "6829C8F9EB659CE67F87FC764661B4006AEB8B3DBF6744081A84438072D4EE7E",
+      "s": "A9AA846A4E0852D233238DE03FCB9F60461093986F303B02CFD1CC3B6D0C539C"
+    }
+  ]
+}

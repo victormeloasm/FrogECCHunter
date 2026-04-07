@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "title": "Raw family X448 passive-analysis playground",
+  "mode": "parser",
+  "curve": {
+    "name": "X448",
+    "family": "montgomery"
+  },
+  "public_key": {
+    "raw_hex": "0100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "template.kind": "playground_raw_family",
+    "engine.family": "dedicated_non_weierstrass",
+    "curve.family": "montgomery"
+  },
+  "signatures": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Challenge skeleton generated from a supplied public key",
+  "mode": "x25519_oracle",
+  "curve": { "name": "x25519" },
+  "public_key": { "raw_hex": "A546E36BF2C5F7D84B7A5E7B1C6DBE4E0A5F42B9D3A0D1E2F3C4B5A697887766" },
+  "constraints": { "nonce_max_bits": 0, "privkey_max_bits": 0, "related_delta_max": 0, "related_a_abs_max": 0, "related_b_abs_max": 0, "unix_time_min": 0, "unix_time_max": 0 },
+  "facts": {
+    "notes.generator": "Replace placeholders with real challenge data",
+    "engine.family": "dedicated_non_weierstrass"
+  },
+  "signatures": [
+    { "message": "REPLACE ME", "hash_hex": "", "r": "", "s": "" }
+  ]
+}

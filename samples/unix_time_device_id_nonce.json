@@ -1,0 +1,36 @@
+{
+  "title": "Unix time plus device identifier nonce",
+  "mode": "ecdsa",
+  "curve": { "name": "secp256k1" },
+  "public_key": {
+    "compressed": "021945d9aee70bbe3fb61c183a594c87e1c776340663fa6a0d495d9caaa63cec7d"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 1712345590,
+    "unix_time_max": 1712345610
+  },
+  "facts": {
+    "rng": {
+      "generator": "unix_time_plus_device_id",
+      "source": "device_identifier",
+      "device_id_min": "1300",
+      "device_id_max": "1370"
+    },
+    "nonce": {
+      "rfc6979": false
+    }
+  },
+  "signatures": [
+    {
+      "message": "unix-time-device-id",
+      "hash_hex": "5f2c49e2f261817288aca2f58127342687d7f625efd97eee604977758bfe5d6f",
+      "r": "b260c4b967e981f9ed7b3c16613f2488cceb142c63e2bb20b7267ed06608aae1",
+      "s": "9b7f9d950d81bade64f3c9efe67267dfcfb2b4b1053e37c2196935c7008007ac"
+    }
+  ]
+}

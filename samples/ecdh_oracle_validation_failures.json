@@ -1,0 +1,47 @@
+{
+  "title": "ECDH oracle with validation failures",
+  "mode": "ecdh_oracle",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0278F2F52E67099D47045E53E5EF954520A9930CDF5360461F1DF230C8FFA0F01F",
+    "x": "78F2F52E67099D47045E53E5EF954520A9930CDF5360461F1DF230C8FFA0F01F",
+    "y": "B8C91169AEB1542DA702BCD40F78FA61E4B9EF6FE0F14EB8D9CB149C9E2DDEDC"
+  },
+  "facts": {
+    "validation.accept_invalid_public_key_encoding": "true",
+    "validation.accept_infinity": "true",
+    "validation.accept_off_curve_points": "true",
+    "validation.subgroup_check": "false",
+    "validation.cofactor_clearing": "false",
+    "validation.accept_invalid_curve_points": "true",
+    "validation.accept_twist_points": "true",
+    "validation.generator_checked": "false",
+    "validation.curve_order_checked": "false",
+    "curve.parameters.trusted_source": "false",
+    "ecdh.use_x_coordinate_only": "true",
+    "ecdh.use_kdf": "false",
+    "ecdh.use_raw_shared_secret_as_key": "true",
+    "ecdh.truncate_shared_secret": "true",
+    "protocol.key_confirmation": "false",
+    "protocol.encrypt_then_mac": "false",
+    "oracle.kind": "x_coordinate",
+    "oracle.decrypt_validity": "true",
+    "oracle.error_detail": "verbose",
+    "oracle.timing_leak": "true",
+    "parser.weak_compressed_point_parser": "true",
+    "verification.accepts_out_of_range_rs": "true",
+    "verification.accepts_zero_rs": "true",
+    "verification.accepts_mixed_curve_domain": "true",
+    "verification.skips_public_key_validation": "true",
+    "session.reuse_shared_secret": "true",
+    "session.rotate_ephemeral_keys": "false",
+    "cross_protocol.scalar_reuse": "true",
+    "protocol.replay_protection": "false",
+    "protocol.domain_separation": "false",
+    "protocol.hash_to_int_mismatch": "true",
+    "rng.custom_without_health_tests": "true"
+  },
+  "signatures": []
+}

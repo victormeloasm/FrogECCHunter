@@ -1,0 +1,29 @@
+{
+  "title": "Message hash plus PID used as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02C4C340D23F614DD7BE4092154FF286D73B5F3B4FFCE4BE99C8BDE89853C14174"
+  },
+  "facts": {
+    "rng": {
+      "generator": "message_hash_plus_pid",
+      "pid_min": "4000",
+      "pid_max": "5000",
+      "source": "pcg32"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce was hash(message) plus the process ID.",
+      "hash_hex": "45F59F645E73FC61D677C8E26F006042913F712C1CDBEE8275E6862687375131",
+      "r": "3D3FC2C0CA7469C7ADDB75D77CF3CAB356930A138A70712860903B67475CD199",
+      "s": "B282C7397F05F9E0F2245CDC5905078D4FC387E597029B5DDEF8161F23330404"
+    }
+  ]
+}

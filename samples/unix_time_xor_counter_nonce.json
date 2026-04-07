@@ -1,0 +1,35 @@
+{
+  "title": "Unix time XOR counter used as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "03FFECF8B36D08FC057F53158B765276A25ADB0AF1B3F16FD198C1859C9564C309"
+  },
+  "facts": {
+    "rng": {
+      "generator": "unix_time_xor_counter",
+      "counter_min": "0",
+      "counter_max": "255"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    },
+    "parser": {
+      "accept_trailing_garbage": "true"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce was unix time XOR a tiny counter.",
+      "hash_hex": "DCA81C70D7CF88CE72A30FE6BE24F660D9DDBF3B4DC531F0786C98404698713F",
+      "r": "F9895EC7E05C503229346839BC06D344D80B40AE95B097FBFF969CCB43A8AB42",
+      "s": "8BEC8AB0E2504F0AC2C0B26E06FA87EBAA96523A62F06837DF6B9EB0A263152E"
+    }
+  ],
+  "constraints": {
+    "unix_time_min": 1712456700,
+    "unix_time_max": 1712456900
+  }
+}

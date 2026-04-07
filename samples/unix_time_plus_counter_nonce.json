@@ -1,0 +1,32 @@
+{
+  "title": "Unix time plus counter used as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02D47DA6C9135E1B08C8E8388F82D62F96D3F7252ED8622BE6C0F2C104CD061AB1"
+  },
+  "facts": {
+    "rng": {
+      "generator": "unix_time_plus_counter",
+      "counter_min": "0",
+      "counter_max": "128"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce was unix time plus a tiny counter.",
+      "hash_hex": "472C651033CC2199561F7D92211C1A8F3662649C03CE62236121EE28F24371F3",
+      "r": "5D8641AC67DCDC9B4D1128FD9BBCCC438326954680C152B28A2DF3EFD9885BAC",
+      "s": "90B887D26AB56B3EFA1A847F6419733120D4D6BC5AA534FED02E2801FB9E6E3C"
+    }
+  ],
+  "constraints": {
+    "unix_time_min": 1712399900,
+    "unix_time_max": 1712400100
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Message hash XOR counter used as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02FD58F92FDD192389BCB7E4DCC80983AAF484ABCA2DE6BEB905854E7DD8D990DF"
+  },
+  "facts": {
+    "rng": {
+      "generator": "message_hash_xor_counter",
+      "counter_min": "677",
+      "counter_max": "877"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    },
+    "protocol": {
+      "domain_separation": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce was hash(message) XOR a tiny counter.",
+      "hash_hex": "B67C1DE8FA1426050A29436C768FD993177EE3B253133F7E01B8F4FA8043B111",
+      "r": "D69B8E2246331F0217F224937D17BEEC4D9C5492B3E5A423F3E18A919D1D36F8",
+      "s": "93F54D298BA44901BC736CE3A80F66EFE284D8B57C33652C6BBD8DD71BCE41C0"
+    }
+  ]
+}

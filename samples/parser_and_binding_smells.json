@@ -1,0 +1,33 @@
+{
+  "title": "Parser and transcript-binding smell bundle",
+  "mode": "ecdh_oracle",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0328F1DA21419E50510D85E8D1BB465F54A3088BA63EC7984C20CA3DD747287DB7"
+  },
+  "facts": {
+    "parser": {
+      "accept_hybrid_pubkeys": "true",
+      "accept_noncanonical_integers": "true",
+      "relaxed_pubkey_length": "true"
+    },
+    "implementation": {
+      "scalar_blinding": "false",
+      "complete_group_formulas": "false"
+    },
+    "protocol": {
+      "transcript_binding": "false",
+      "signature_context_reuse": "true",
+      "domain_separation": "false"
+    },
+    "ecdh": {
+      "static_ephemeral": "true"
+    },
+    "rng": {
+      "generator": "device_id"
+    }
+  },
+  "signatures": []
+}

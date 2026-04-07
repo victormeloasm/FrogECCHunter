@@ -1,0 +1,41 @@
+{
+  "title": "SFC64 used directly for the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0388536E278F183102D679EE045B147DEB2449310BB7073040496F54F66BFB375E",
+    "x": "88536E278F183102D679EE045B147DEB2449310BB7073040496F54F66BFB375E",
+    "y": "869E4B222B306BDEACC8023B2847F1EBBAD18E0E48EB39312D5D93B72F763C37"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "rng": {
+      "generator": "sfc64",
+      "seed_min": 20015998343680,
+      "seed_max": 20015998344447,
+      "discard_outputs": 0,
+      "source": "sfc64"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "SFC64 used directly for the ECDSA nonce",
+      "hash_hex": "A06524C4340EAE115CAD9D27C5F898B66E4FD0F1C097A1F91A9EB4D8A8308DFE",
+      "r": "4D463446DD5AFE0EC928CD911E49A1B88B260C75BA5B656B0A575C13316C7E27",
+      "s": "25EA66AA0EB3EFB012C3B7B952C03BE27E7F350C93541D5B04EE2CD124604237"
+    }
+  ]
+}

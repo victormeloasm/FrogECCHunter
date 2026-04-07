@@ -1,0 +1,39 @@
+{
+  "title": "C rand()-style sequence used as ECDSA nonces",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02954851B53E26C7816707A35B726754CC328FC26351EB676EA3BB0B55842AFDE0"
+  },
+  "facts": {
+    "rng": {
+      "generator": "c_rand15_sequence",
+      "seed_min": "1237",
+      "seed_max": "1437",
+      "lcg": {
+        "a": "1103515245",
+        "c": "12345",
+        "m": "2147483648"
+      }
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "rand() style output one signed this message.",
+      "hash_hex": "8B847C7162F609F6E269D8AD72E64B5EA5DD6835F1BDA2652AA96C590A854B26",
+      "r": "6829C8F9EB659CE67F87FC764661B4006AEB8B3DBF6744081A84438072D4EE7E",
+      "s": "E119BCFAA1EBCA92243ADE74B70059D076861941206516310331BA80B2BCEDAD"
+    },
+    {
+      "message": "rand() style output two signed this message.",
+      "hash_hex": "40B3C6B367E1FCE0E06B1E08E22D7E37D1F0327A62F439428C3457E6D7ED799D",
+      "r": "E55BD222E26CF589D1DDEDEB456870C5E8B75D35FAA140D6EB8763EC410F42C1",
+      "s": "90C80EC5AE13E60EDE43A1A1EA88AE3172CBD0340DF14C7D98C277052CBD0810"
+    }
+  ]
+}

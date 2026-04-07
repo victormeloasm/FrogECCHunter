@@ -1,0 +1,36 @@
+{
+  "title": "PID used directly as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "03B6460ACA0C46B565CE860773E803603253BC5FEE4BB1EC7184C206A0D59FA5AB",
+    "x": "B6460ACA0C46B565CE860773E803603253BC5FEE4BB1EC7184C206A0D59FA5AB",
+    "y": "01CE5818617F248DDD3A848293AD7217003125FA8C01029D744B12E68C755583"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "rng": {
+      "generator": "pid",
+      "pid_min": 31200,
+      "pid_max": 31450
+    }
+  },
+  "signatures": [
+    {
+      "message": "PID used directly as ECDSA nonce.",
+      "hash_hex": "03418CDD3618E1E1DD51CFBA5E44C6F372C3244FE577E253D3C754D99824C554",
+      "r": "E5648161E95DBF2BFC687B72B745269FA906031E2108118050ABA59524A23C40",
+      "s": "D13BE1BEBB8B696675AC0FBF14995528F184C2E2FE7B69E0C07B8EE80F08EF86"
+    }
+  ]
+}

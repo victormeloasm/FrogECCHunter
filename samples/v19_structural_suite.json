@@ -1,0 +1,65 @@
+{
+  "title": "v19 structural suite across ECDH, parser, oracle, and provenance",
+  "mode": "ecdh_oracle",
+  "curve": {
+    "name": "prime256v1"
+  },
+  "public_key": {
+    "compressed": "0328F1DA21419E50510D85E8D1BB465F54A3088BA63EC7984C20CA3DD747287DB7"
+  },
+  "facts": {
+    "validation": {
+      "accept_low_order_points": "true",
+      "accept_twist_points": "true",
+      "subgroup_check": "false",
+      "cofactor_clearing": "false",
+      "twist_security_checked": "false"
+    },
+    "ecdh": {
+      "accept_mixed_curve_peer_keys": "true",
+      "peer_key_type_confusion": "true",
+      "revalidate_after_parse": "false",
+      "kdf_transcript_binding": "false",
+      "kdf_context_binding": "false",
+      "peer_identity_binding": "false",
+      "unknown_key_share_protection": "false",
+      "accept_all_zero_shared_secret": "true"
+    },
+    "parser": {
+      "accept_oid_mismatch": "true",
+      "accept_field_length_mismatch": "true",
+      "accept_sec1_prefix_confusion": "true",
+      "accept_empty_integers": "true",
+      "accept_duplicate_der_fields": "true",
+      "accept_multiple_pem_objects": "true",
+      "accept_mixed_case_hex_scalars": "true",
+      "require_compressed_points": "false",
+      "accept_duplicate_pubkey_forms": "true",
+      "accept_leading_zero_scalars": "true"
+    },
+    "oracle": {
+      "parser_error_classes": "true",
+      "subgroup_classification": "true",
+      "invalid_curve_classification": "true",
+      "all_zero_shared_secret": "true",
+      "verification_error_classes": "true",
+      "twist_classification": "true"
+    },
+    "curve": {
+      "order_proof_documented": "false",
+      "generator_provenance_documented": "false",
+      "cofactor_documented": "false",
+      "twist_order_checked": "false",
+      "security_rationale_documented": "false",
+      "identifier_matches_parameters": "false",
+      "subgroup_generator_binding_documented": "false",
+      "trace_checked": "false",
+      "seed_provenance_documented": "false"
+    },
+    "protocol": {
+      "contributory_ecdh": "false",
+      "cofactor_handling": "false"
+    }
+  },
+  "signatures": []
+}

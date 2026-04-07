@@ -1,0 +1,30 @@
+{
+  "title": "Message hash used directly as the nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02A47615D035E0E63DF6F3152EDEEA400EA4E3CB4CB88315DC0F244D6FA0C19F95"
+  },
+  "facts": {
+    "rng": {
+      "generator": "message_hash_scalar",
+      "message_only": "true"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    },
+    "protocol": {
+      "domain_separation": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The developer set k equal to the message hash.",
+      "hash_hex": "56DFFFDBB513B8DD251F0E5C6C20A78168BFD08F3F3F614A02C17218CB56EF18",
+      "r": "E7082E86B91045850F3213792A4B73CFA677F63BB2A1792759C634CB28E567D4",
+      "s": "9D627F9F62778E430732C2428B7DF93E8A1995B92673545AA1B03AE2FBE9DD8E"
+    }
+  ]
+}

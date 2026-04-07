@@ -1,0 +1,32 @@
+{
+  "title": "Raw PCG32 output used as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02EB4F321F552EBD081DB16D7C8B671866801926538CC92DFFFED4716DAF56D8B4"
+  },
+  "facts": {
+    "rng": {
+      "generator": "pcg32",
+      "seed_min": "81985529216486795",
+      "seed_max": "81985529216486995",
+      "source": "pcg32",
+      "pcg": {
+        "inc": "1442695040888963407"
+      }
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce came from raw PCG32 output.",
+      "hash_hex": "518022C3D4E5F4E8FB8EAA4C230F0FBFD99206CF0B055091199A35B47F7FAC1F",
+      "r": "564C8E4210F1B188606ADDA2381EDF769C75585F621614F12E30345052E8074C",
+      "s": "AC682DFA990B5E577B126CABCFEA6FC7D89B84A25D24EA80124E284D1EB19048"
+    }
+  ]
+}

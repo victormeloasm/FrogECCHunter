@@ -1,0 +1,37 @@
+{
+  "title": "MT19937 used directly for the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "021945D9AEE70BBE3FB61C183A594C87E1C776340663FA6A0D495D9CAAA63CEC7D",
+    "x": "1945D9AEE70BBE3FB61C183A594C87E1C776340663FA6A0D495D9CAAA63CEC7D",
+    "y": "28120DA8535970FD314BB9DD643C3CFF1B4D7889E61E9B31D56F51DD579C0914"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "rng": {
+      "generator": "mt19937",
+      "seed_min": 1287,
+      "seed_max": 1387,
+      "discard_outputs": 0
+    }
+  },
+  "signatures": [
+    {
+      "message": "Meet at sector seven with the spare key.",
+      "hash_hex": "C74447A4A8ECE18DAC337BE9917A12A1C374B28F2FE5ED868F23378822CBB30D",
+      "r": "5C4E2B0595E77707865FA957CCB2DA466D5921918FCD452DA3AC465BA90BC821",
+      "s": "4650C5CCF8DF1EE4CA77496CEC698BDE1591771B10A10AF112B88BC017636E60"
+    }
+  ]
+}

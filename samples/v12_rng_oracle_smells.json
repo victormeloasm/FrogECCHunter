@@ -1,0 +1,27 @@
+{
+  "title": "v12 RNG and oracle smell bundle",
+  "mode": "ecdh_oracle",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "021945D9AEE70BBE3FB61C183A594C87E1C776340663FA6A0D495D9CAAA63CEC7D"
+  },
+  "facts": {
+    "rng": {
+      "generator": "sfc64",
+      "domain_tag_absent": "true"
+    },
+    "parser": {
+      "accept_duplicate_keys": "true",
+      "accept_mixed_case_hex": "true",
+      "weak_point_decompression_checks": "true",
+      "accept_trailing_garbage": "true"
+    },
+    "oracle": {
+      "length_leak": "true",
+      "subgroup_confinement_hint": "true"
+    }
+  },
+  "signatures": []
+}

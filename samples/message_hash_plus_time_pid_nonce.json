@@ -1,0 +1,34 @@
+{
+  "title": "Message hash plus unix time plus PID used as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02CF9BFBDCA0C087FDEA7097D5482D3A7B30B5FA1CB52B621F89C0A61619B782D4"
+  },
+  "constraints": {
+    "unix_time_min": 1712449900,
+    "unix_time_max": 1712450100
+  },
+  "facts": {
+    "rng": {
+      "generator": "message_hash_plus_time_pid",
+      "pid_min": "4000",
+      "pid_max": "5000",
+      "seed": "time",
+      "source": "counter"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce was hash(message) plus unix time plus PID.",
+      "hash_hex": "45733E89486628F8C918A114436D5D04524226ECB4C6F40F8332E1DD23EC847F",
+      "r": "EEE838F528F5F147FBBAF6A6181D849CF162C77FF15D9E1CCC763D55D4312E11",
+      "s": "47CB10ED6581C665FEF64D34AAD20AAE30192FB96F6667628C99F89C6736783A"
+    }
+  ]
+}

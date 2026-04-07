@@ -1,0 +1,33 @@
+{
+  "title": "Exact ECDSA nonce reuse",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02C6B8A3EB4DE1941710A0176D1991CF9B1BAF472A36FB63954453E13E6A986FD4",
+    "x": "C6B8A3EB4DE1941710A0176D1991CF9B1BAF472A36FB63954453E13E6A986FD4",
+    "y": "96D65F5B4DAEAFCC02E193A86ECEA3E91970318B13050D2BA949631EA741E012"
+  },
+  "facts": {
+    "rng.source": "rand",
+    "rng.seed": "time",
+    "rng.state_reuse_after_fork": "true",
+    "nonce.rfc6979": "false",
+    "protocol.domain_separation": "false"
+  },
+  "signatures": [
+    {
+      "message": "Invoice 4487 approved for payment.",
+      "hash_hex": "96EE8445D438798C273BD005F575F2EED2EB443A5DA4BD678B880A4CB6E8391F",
+      "r": "D34D50BFCF4971A85DC72D6E3F1F672F6FE2BA1F86CC4956D7C1175E62A33812",
+      "s": "2D7DD2751DF9DF3BDCCFA61F43F89E8F541FC8025144A4EAF62B99E0E650C1CF"
+    },
+    {
+      "message": "Invoice 4488 approved for payment.",
+      "hash_hex": "1C4FE7AAF0C5D7FD9EA993189A2A8F7FC4D01A5BF927C0BCC0BD2895BE1E013C",
+      "r": "D34D50BFCF4971A85DC72D6E3F1F672F6FE2BA1F86CC4956D7C1175E62A33812",
+      "s": "D5DCEB0E23541C6572FF0D8DD4747448B5A94BD889A75C557EE0DCB95BFE5D13"
+    }
+  ]
+}

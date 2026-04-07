@@ -1,0 +1,41 @@
+{
+  "title": "MWC1616 used directly for the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0388536E278F183102D679EE045B147DEB2449310BB7073040496F54F66BFB375E",
+    "x": "88536E278F183102D679EE045B147DEB2449310BB7073040496F54F66BFB375E",
+    "y": "869E4B222B306BDEACC8023B2847F1EBBAD18E0E48EB39312D5D93B72F763C37"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "rng": {
+      "generator": "mwc1616",
+      "seed_min": 305441536,
+      "seed_max": 305441808,
+      "discard_outputs": 0,
+      "source": "mwc1616"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "MWC1616 used directly for the ECDSA nonce",
+      "hash_hex": "BD3560BB0F6ABE16E9CD53D2B768B2B43F7AA280FBF954F5AE9C04B17E94070F",
+      "r": "5E65EC2CDC3F6AD7DD77F6D8673DE58F4D65D895D1D59F6B5496FF76A9D64D5E",
+      "s": "318C88FC590DD6F5657081046396DBAE4B21F3B84D45E68A25289F15B6EAE56D"
+    }
+  ]
+}

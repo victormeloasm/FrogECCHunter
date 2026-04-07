@@ -1,0 +1,29 @@
+{
+  "title": "Message hash XOR PID used as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "031F278E98987D8010C578EB10E8FCC28390993120CB4E78A45E0C80DF90F8BC5F"
+  },
+  "facts": {
+    "rng": {
+      "generator": "message_hash_xor_pid",
+      "pid_min": "2000",
+      "pid_max": "3000",
+      "source": "splitmix64"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce was hash(message) XOR the process ID.",
+      "hash_hex": "E10DD276C0049CD028BBD5C20E50EEF7EC568C6F2F52268698DD0FEF202D1221",
+      "r": "76371F65A8D04646DEBDED18411702E0CCC8D4971107C37F27C65245C14575B9",
+      "s": "032CFE522DE9324F64091ECE058CD9BF2AFC24D13EB07BF9F4D82D51AB36DF89"
+    }
+  ]
+}

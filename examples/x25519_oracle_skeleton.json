@@ -1,0 +1,21 @@
+{
+  "title": "X25519 oracle skeleton",
+  "mode": "ecdh_oracle",
+  "curve": {
+    "name": "x25519",
+    "family": "montgomery"
+  },
+  "public_key": {
+    "raw_hex": "<32-byte X25519 public key hex>"
+  },
+  "facts": {
+    "notes.engine_status": "Template-only in the short-Weierstrass engine; active X25519 oracle algebra is a separate roadmap item.",
+    "ecdh.use_kdf": true,
+    "validation.subgroup_check": true
+  },
+  "oracle": {
+    "kind": "x_coordinate",
+    "notes": "Populate transcript fields captured from the target implementation."
+  },
+  "signatures": []
+}

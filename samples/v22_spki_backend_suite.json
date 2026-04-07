@@ -1,0 +1,23 @@
+{
+  "title": "v22 SPKI and backend differential suite",
+  "mode": "parser",
+  "curve": { "name": "secp256k1" },
+  "public_key": {
+    "compressed": "0272588CF4BC7FB52A68D5C81B83643A96A881ACFD9359D268BF675C0173B46920"
+  },
+  "facts": {
+    "parser.accept_spki_without_named_curve": true,
+    "parser.accept_spki_bitstring_padding": true,
+    "parser.accept_raw_ec_point_without_spki": true,
+    "backend.diff.spki_vs_sec1": true,
+    "backend.diff.pem_label": true,
+    "backend.diff.explicit_curve_parameters": true,
+    "curve.explicit_parameter_proof_documented": false,
+    "curve.spki_oid_documented": false,
+    "curve.alias_registry_consistent": false,
+    "parser.accept_multiple_pem_objects": true,
+    "parser.accept_unknown_pem_label": true,
+    "backend.diff.oid_resolution": true
+  },
+  "signatures": []
+}

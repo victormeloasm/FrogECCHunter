@@ -1,0 +1,14 @@
+{
+  "title": "Challenge skeleton generated from a supplied public key",
+  "mode": "eddsa",
+  "curve": { "name": "ed25519" },
+  "public_key": { "raw_hex": "D75A980182B10AB7D54BFED3C964073A0EE172F3DAA62325AF021A68F707511A" },
+  "constraints": { "nonce_max_bits": 0, "privkey_max_bits": 0, "related_delta_max": 0, "related_a_abs_max": 0, "related_b_abs_max": 0, "unix_time_min": 0, "unix_time_max": 0 },
+  "facts": {
+    "notes.generator": "Replace placeholders with real challenge data",
+    "engine.family": "dedicated_non_weierstrass"
+  },
+  "signatures": [
+    { "message": "REPLACE ME", "hash_hex": "", "r": "", "s": "" }
+  ]
+}

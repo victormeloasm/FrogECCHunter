@@ -1,0 +1,23 @@
+{
+  "title": "High-S ECDSA malleability example",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0334D793721210BAF2202615F91BF778766672CA03A994DC0F181E56619B4C8092",
+    "x": "34D793721210BAF2202615F91BF778766672CA03A994DC0F181E56619B4C8092",
+    "y": "C57610197D5F687ACDE6BC15DEBB9CD05156A3F025A1BCC5E65651B88C073371"
+  },
+  "signatures": [
+    {
+      "message": "Do not trust the lantern keeper.",
+      "hash_hex": "070EBBC6FA9265101AEEF6497CB0B025878E2C507C1C734E3D1AB23E0853B1DF",
+      "r": "66777EB78DC829792F1077BAE0B8A30276CED4C1F0BE4EB4E900965F4019519A",
+      "s": "A9187AAAB9F15D30653DFF52D8CD37A4C0B467DACB8E9ED12EF672FA765D1D48"
+    }
+  ],
+  "facts": {
+    "verification.low_s_enforced": "false"
+  }
+}

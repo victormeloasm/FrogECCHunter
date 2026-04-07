@@ -1,0 +1,37 @@
+{
+  "title": "Xorshift64* used directly for the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0331B58F19A0D2D35CA26AEC1E3CE78CDC6AF4413C30D07552686DE833FC63EA56",
+    "x": "31B58F19A0D2D35CA26AEC1E3CE78CDC6AF4413C30D07552686DE833FC63EA56",
+    "y": "CF5B9F7CAB171734239AE377EB161BB9D34C9E240A523006EB550DA551E654BB"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "rng": {
+      "generator": "xorshift64star",
+      "seed_min": 20240467,
+      "seed_max": 20240567,
+      "discard_outputs": 1
+    }
+  },
+  "signatures": [
+    {
+      "message": "Rotate the backup token before sunrise.",
+      "hash_hex": "3DAB1A333DAB397F904889ADFEE19A0F33553D315204EEF9BC381798634225D3",
+      "r": "4197B3E392D62B68FB5154D5EAC137E7F95E04E3B5B8FC0D3442484760C8A84A",
+      "s": "AAB058AC479E5CE624F4299627C6B595B849A61960095BC66C443773636F0271"
+    }
+  ]
+}

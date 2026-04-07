@@ -1,0 +1,39 @@
+{
+  "title": "LCG raw-state sequence used as ECDSA nonces",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0372588CF4BC7FB52A68D5C81B83643A96A881ACFD9359D268BF675C0173B46920"
+  },
+  "facts": {
+    "rng": {
+      "generator": "lcg_sequence",
+      "seed_min": "424192",
+      "seed_max": "424292",
+      "lcg": {
+        "a": "1103515245",
+        "c": "12345",
+        "m": "2147483648"
+      }
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "LCG state output one signed this message.",
+      "hash_hex": "AE558D847D38A64E363C7E1EC8686AF8541A5CA05439B10EACF457F4FB9ED3DB",
+      "r": "061080E6076DEF6FCC65A0753DD6018572E1F00C2464113334F6487378ADDD34",
+      "s": "7CC83544FAB9243460B0D079D3E7FEFB780B81624E25A5C8625475FDA2A69440"
+    },
+    {
+      "message": "LCG state output two signed this message.",
+      "hash_hex": "86A1BBA83AC3F26B20C77BD85D3E5A1820110B3C87368FE4ADCC3C1EDE9FF106",
+      "r": "26C75F686DA0CC2E67FD1A7E386E3E17DB2DA31D3756BD291B679801FCB1761E",
+      "s": "E17D6918097DFAEBEF4DF9C401E030A2EC893B05EA38AA537660EF221E3074F7"
+    }
+  ]
+}

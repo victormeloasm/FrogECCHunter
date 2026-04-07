@@ -1,0 +1,24 @@
+{
+  "title": "Ed25519 diagnostic skeleton",
+  "mode": "eddsa",
+  "curve": {
+    "name": "ed25519",
+    "family": "edwards"
+  },
+  "public_key": {
+    "raw_hex": "<32-byte Ed25519 public key hex>"
+  },
+  "facts": {
+    "notes.engine_status": "Template-only in the short-Weierstrass engine; active EdDSA algebra is a separate roadmap item.",
+    "rng.generator": "rfc8032_or_custom",
+    "verification.skips_public_key_validation": false
+  },
+  "signatures": [
+    {
+      "message": "REPLACE ME",
+      "hash_hex": "",
+      "r": "",
+      "s": ""
+    }
+  ]
+}

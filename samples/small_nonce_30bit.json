@@ -1,0 +1,22 @@
+{
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02D8019AE39403A4C0B49E98A0BE4ED9AD0B1BA20F324FD6268C7455841DEDDD0D"
+  },
+  "constraints": {
+    "nonce_max_bits": 30,
+    "privkey_max_bits": 0,
+    "related_delta_max": 1048576
+  },
+  "signatures": [
+    {
+      "message": "Meet me under the iron bridge at midnight.",
+      "hash_hex": "4C29238321DB1915AC3CC83CFFD691822F2CA56CA83B6D117B11052CE30F2727",
+      "r": "5AD2703F5B4F4B9DEA4C28FA30D86D3781D28E09DD51AAE1208DE80BB6155BEE",
+      "s": "13DD9896B5ADB512A02C4C419060949CCD5AD496B185DDB84A3F5211BBD9E90F"
+    }
+  ]
+}

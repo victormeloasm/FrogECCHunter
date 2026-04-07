@@ -1,0 +1,28 @@
+{
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0372588CF4BC7FB52A68D5C81B83643A96A881ACFD9359D268BF675C0173B46920"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 16
+  },
+  "signatures": [
+    {
+      "message": "Meet me at the old stone bridge at midnight.",
+      "hash_hex": "6A8CF8B3421853AE4432CD3FE6997E7EB5E8068A209CF87223C0FFC8A0A91504",
+      "r": "08F4F37E2D8F74E18C1B8FDE2374D5F28402FB8AB7FD1CC5B786AA40851A70CB",
+      "s": "94703BA00A65E1773B8B00170790DCD133338372176BE3C7B465D7B42D39F87E"
+    },
+    {
+      "message": "The second envelope is hidden under the red lantern.",
+      "hash_hex": "F994EECAB4941B98CBEE8E156A427395AF85003E852A67E456092024B894E49A",
+      "r": "BDD8BC0008173FC0DA77C82D758AC6EAFBBBEF1FAB9D83BE51D2F0C7D44CBE21",
+      "s": "8975DA1CD31B85B90AE8A0B5A84003BD2F83CDFA1DD21C400291A672C0277E48"
+    }
+  ]
+}

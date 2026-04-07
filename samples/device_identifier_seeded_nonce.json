@@ -1,0 +1,36 @@
+{
+  "title": "Device identifier directly used as ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": { "name": "secp256k1" },
+  "public_key": {
+    "compressed": "021945d9aee70bbe3fb61c183a594c87e1c776340663fa6a0d495d9caaa63cec7d"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "rng": {
+      "generator": "device_id",
+      "source": "device_identifier",
+      "device_id_min": "424200",
+      "device_id_max": "424260"
+    },
+    "nonce": {
+      "rfc6979": false
+    }
+  },
+  "signatures": [
+    {
+      "message": "device-id-seeded",
+      "hash_hex": "62d9a04da9f30b346cfa6dc32b743bd39b25a1a32cb367f3b155afef25918f8a",
+      "r": "e9a2463c5ecaaaac49dc3ac382cae02cec513d342ee9a6c18e842c344f7b2bfb",
+      "s": "491be85186c245cef1f5c71f03c771adb4a161d7cd00fb7dee3b1c07c9e660b3"
+    }
+  ]
+}

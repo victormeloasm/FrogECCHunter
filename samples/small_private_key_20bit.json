@@ -1,0 +1,29 @@
+{
+  "title": "Small private key range",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "038049027F864EB73B5084888FD4E9D6FD3A7419BFB5B394605EA94767ED7946DC",
+    "x": "8049027F864EB73B5084888FD4E9D6FD3A7419BFB5B394605EA94767ED7946DC",
+    "y": "E858635A3E8D752E7ECFD079B443769B747A82EB53547E1F22F8274523AC2747"
+  },
+  "constraints": {
+    "privkey_max_bits": 20
+  },
+  "facts": {
+    "key.source": "small_range",
+    "key.max_bits": "20",
+    "rng.source": "unknown_custom",
+    "nonce.rfc6979": "false"
+  },
+  "signatures": [
+    {
+      "message": "The archive key was generated from a tiny range.",
+      "hash_hex": "F63B2254244A49B71F17E75E38ACE668D7DCA0F6D6CFA191CBCC7B6E38BB43FE",
+      "r": "A3DD93431D73CA4B22345873C4DAB7D22856C4941A0549819648B00309BF5FEB",
+      "s": "BEBCAEEF24EC2EED1445A1822A67CA6975C3F732CCADEFECD63A8DA7CC33EBC6"
+    }
+  ]
+}

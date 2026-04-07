@@ -1,0 +1,30 @@
+{
+  "title": "Partial low-bit nonce leakage",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "03D6B17BEDD739624808C47065CF794BA1737B7B0AF31D464FEAEAD3D3A61259BA"
+  },
+  "facts": {
+    "nonce": {
+      "leak": {
+        "lsb_bits": "16",
+        "lsb_value": "48879",
+        "unknown_bits": "14"
+      }
+    },
+    "rng": {
+      "generator": "partial_lsb_leak_demo"
+    }
+  },
+  "signatures": [
+    {
+      "message": "Low bits of the nonce leaked through a debug log.",
+      "hash_hex": "59E158A455CB01455C6ACAD868E1B89AAC4311AE31E3E4F2BEBF714A167D9BAA",
+      "r": "0A036DE38C95577B57262547C261BBC0B0B600A5F6A23F15D99ADF28E52EEE80",
+      "s": "3FF6DCD0C614CEB5E89A177B8E1F062D49B9E5B78A466FFB93E59C93D193E5FE"
+    }
+  ]
+}

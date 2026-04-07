@@ -1,0 +1,34 @@
+{
+  "title": "Public key in a tiny scalar range",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0362EF25AD04561002C82A1AC0DC938313665D10B3432333EAD6B3DB2507408ABD",
+    "x": "62EF25AD04561002C82A1AC0DC938313665D10B3432333EAD6B3DB2507408ABD",
+    "y": "02BF57221BFFA5E5320E2048064FC91B5062CD4EBE99A8428BD7A4E293CAA871"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "key": {
+      "small_range_bits": 16
+    }
+  },
+  "signatures": [
+    {
+      "message": "Tiny scalar public key sample.",
+      "hash_hex": "D7AB16A3D4029B12A88A778511B71E0B7F6D43B27D51160633D1E1A732E28E30",
+      "r": "F01D6B9018AB421DD410404CB869072065522BF85734008F105CF385A023A80F",
+      "s": "C1BCFE7C8906173782954BE7DFF6D343225DA505EAB6D5BA7FFB62E5449942FC"
+    }
+  ]
+}

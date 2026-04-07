@@ -1,0 +1,38 @@
+{
+  "title": "Device identifier XOR counter nonce",
+  "mode": "ecdsa",
+  "curve": { "name": "secp256k1" },
+  "public_key": {
+    "compressed": "021945d9aee70bbe3fb61c183a594c87e1c776340663fa6a0d495d9caaa63cec7d"
+  },
+  "constraints": {
+    "nonce_max_bits": 0,
+    "privkey_max_bits": 0,
+    "related_delta_max": 0,
+    "related_a_abs_max": 0,
+    "related_b_abs_max": 0,
+    "unix_time_min": 0,
+    "unix_time_max": 0
+  },
+  "facts": {
+    "rng": {
+      "generator": "device_id_xor_counter",
+      "source": "machine_id",
+      "device_id_min": "416240",
+      "device_id_max": "416320",
+      "counter_min": "700",
+      "counter_max": "780"
+    },
+    "nonce": {
+      "rfc6979": false
+    }
+  },
+  "signatures": [
+    {
+      "message": "device-id-xor-counter",
+      "hash_hex": "dedb1766b3859b751b5d2a1579f0d21751b0fcd04c41f020b502564676557bb1",
+      "r": "5b4287ff416173590844fe542561f6e32be815d5a4a6fd6e8a4c686f13aeabc3",
+      "s": "412c2f895f0c17728ca1c82ddcf2da3895cd5f7b3b66f4c1fd96961085e6cacc"
+    }
+  ]
+}

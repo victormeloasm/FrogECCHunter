@@ -1,0 +1,35 @@
+{
+  "title": "SplitMix64 sequence used for two ECDSA nonces",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02F707008EF4087715B13ED73C988AF72DCF80BE1AA2746FDF016CA589C16B8FD3"
+  },
+  "facts": {
+    "rng": {
+      "generator": "splitmix64_sequence",
+      "seed_min": "5000",
+      "seed_max": "5200",
+      "source": "splitmix64"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "SplitMix64 sequence output number one.",
+      "hash_hex": "DB098C364BED958FA9636F440BE3169B300FC7415B918C06D775F46644AC46E5",
+      "r": "2973CC47668D208AD2712CEE52848E6799D9D66371A1FA1AD32EA5D51F50A1AE",
+      "s": "FE68DC6180E678722BC3A549787D712703EA01AA3FDDFAD923850CDCA0073DD2"
+    },
+    {
+      "message": "SplitMix64 sequence output number two.",
+      "hash_hex": "D3EB3F1256F3C0DB4431CDC1B7364A77E351FD61753FF17C88E78B38EF39FE55",
+      "r": "6ACE1F76CD59AE53005ABC34EBB5F5E76C95ACB21828BB40C5854F1B66D7CD2F",
+      "s": "C53CF82864D4E4A2B4A94E8F1D3F0203D9934C24031B3BA26CDCA1F667F9DD22"
+    }
+  ]
+}

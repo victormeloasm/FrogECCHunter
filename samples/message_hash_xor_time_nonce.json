@@ -1,0 +1,31 @@
+{
+  "title": "Message hash XOR unix time used as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0360C0D9C0CCF8EFE4E2BAE32E4425F7B16A93CC245A409A10FD470C95AA10865C"
+  },
+  "constraints": {
+    "unix_time_min": 1712346599,
+    "unix_time_max": 1712346999
+  },
+  "facts": {
+    "rng": {
+      "generator": "message_hash_xor_time",
+      "source": "time"
+    },
+    "nonce": {
+      "rfc6979": "false"
+    }
+  },
+  "signatures": [
+    {
+      "message": "The nonce was hash(message) XOR unix time.",
+      "hash_hex": "C1225B86926D25C44102ABC5808C2E0C23611A2DFDCA6A6A761578E3A4ED4EAF",
+      "r": "78303EFB2F81B4E7D79D5F41AEE54B2F1AE0ED573AA2EC736A295FEF2FE3DFC7",
+      "s": "728A9B595140302B6035CFCF1AB279A8DBB1D18FF68AE79206E952BC43CD233F"
+    }
+  ]
+}

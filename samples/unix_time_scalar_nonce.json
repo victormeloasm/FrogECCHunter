@@ -1,0 +1,30 @@
+{
+  "title": "Unix time used directly as the ECDSA nonce",
+  "mode": "ecdsa",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "02607C088D319D26AB8AA0625C7D67893E707D3195E02B1E34FC37E10560FAF307",
+    "x": "607C088D319D26AB8AA0625C7D67893E707D3195E02B1E34FC37E10560FAF307",
+    "y": "07B9F4447800422A4BCAD59671C38DDF5E4BBD5697BEA80A74C2951EAE35BF42"
+  },
+  "constraints": {
+    "unix_time_min": 1712345600,
+    "unix_time_max": 1712345700
+  },
+  "facts": {
+    "rng.generator": "unix_time_scalar",
+    "rng.seed": "time",
+    "nonce.rfc6979": "false",
+    "key.source": "predictable_seed"
+  },
+  "signatures": [
+    {
+      "message": "The courier left the package at the eastern gate.",
+      "hash_hex": "F18F17419799433410C522F4115260F30D5B12C55DFAB15352AF7C7C9997BD7D",
+      "r": "8C675E94BC2674A28E65655C2CD9B0221409279702A87691AF6855569A54EEF6",
+      "s": "EFFF19BD44115F917BC119E10A4A356A6AC794EE8F21E7ACF2CB8423F27C49CB"
+    }
+  ]
+}

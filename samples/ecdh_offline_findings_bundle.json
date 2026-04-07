@@ -1,0 +1,37 @@
+{
+  "title": "ECDH offline findings bundle",
+  "mode": "ecdh_oracle",
+  "curve": {
+    "name": "secp256k1"
+  },
+  "public_key": {
+    "compressed": "0328F1DA21419E50510D85E8D1BB465F54A3088BA63EC7984C20CA3DD747287DB7",
+    "x": "28F1DA21419E50510D85E8D1BB465F54A3088BA63EC7984C20CA3DD747287DB7",
+    "y": "FF9EF2A758F748AAC08AB55B0F4EF89A62E30F7CFD3C1803DB0C955D524398A5"
+  },
+  "facts": {
+    "validation.accept_invalid_public_key_encoding": "true",
+    "validation.accept_infinity": "true",
+    "validation.accept_off_curve_points": "true",
+    "validation.subgroup_check": "false",
+    "validation.cofactor_clearing": "false",
+    "validation.accept_invalid_curve_points": "true",
+    "validation.accept_twist_points": "true",
+    "ecdh.use_x_coordinate_only": "true",
+    "ecdh.use_kdf": "false",
+    "ecdh.use_raw_shared_secret_as_key": "true",
+    "ecdh.truncate_shared_secret": "true",
+    "protocol.key_confirmation": "false",
+    "protocol.domain_separation": "false",
+    "protocol.replay_protection": "false",
+    "oracle.kind": "x_coordinate",
+    "oracle.decrypt_validity": "true",
+    "oracle.error_detail": "verbose",
+    "oracle.timing_leak": "true",
+    "verification.skips_public_key_validation": "true",
+    "session.reuse_shared_secret": "true",
+    "session.rotate_ephemeral_keys": "false",
+    "cross_protocol.scalar_reuse": "true"
+  },
+  "signatures": []
+}
