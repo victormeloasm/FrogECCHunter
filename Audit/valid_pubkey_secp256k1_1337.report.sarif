@@ -1,0 +1,15 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "tool": { "driver": { "name": "FrogECCHunter", "version": "v30", "rules": [
+        { "id": "tiny_public_key_multiple_scan", "name": "Public key falls in a tiny scalar range", "shortDescription": { "text": "Public key falls in a tiny scalar range" }, "properties": { "category": "keygen", "severity": "critical" } }
+      ] } },
+      "artifacts": [ { "location": { "uri": "valid_pubkey_secp256k1_1337.json" } } ],
+      "results": [
+        { "ruleId": "tiny_public_key_multiple_scan", "level": "error", "message": { "text": "Public key falls in a tiny scalar range | recoverability=R5_trivial_or_lab_proven | FLAG{1337}" }, "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "valid_pubkey_secp256k1_1337.json" } } } ], "properties": { "category": "keygen", "severity": "critical", "recoverability": "R5_trivial_or_lab_proven", "mode": "parser" } }
+      ]
+    }
+  ]
+}

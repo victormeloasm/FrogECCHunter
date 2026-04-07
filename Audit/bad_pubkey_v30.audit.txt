@@ -1,0 +1,30 @@
+FrogECCHunter v30 report
+schema_version: 1.0
+title: Challenge skeleton generated from a supplied public key
+mode: parser
+curve: secp256k1
+signatures: 0
+checks: 348
+
+Input normalization
+  source_kind: pem:PUBLIC KEY
+  normalized_input_kind: sec1_compressed
+  analysis_path: passive_parse_preserved
+  public_key_parsed: no
+
+Capability matrix
+  active_algebra: yes
+  passive_family_mode: no
+
+Executive summary
+  total_checks: 348
+  hit_count: 0
+  recovered_key_count: 0
+  critical_hits: 0
+  high_hits: 0
+  medium_hits: 0
+  low_hits: 0
+  why_no_recovery: public key did not parse algebraically; only passive parser/oracle/provenance checks could run
+
+Primary fault: none confirmed
+Recovered private key: none

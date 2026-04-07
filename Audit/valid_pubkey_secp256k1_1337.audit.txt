@@ -1,0 +1,60 @@
+FrogECCHunter v30 report
+schema_version: 1.0
+title: Valid secp256k1 tiny-range keygen playground (d=1337)
+mode: parser
+curve: secp256k1
+signatures: 0
+checks: 348
+
+Input normalization
+  source_kind: json_embedded
+  normalized_input_kind: sec1_compressed
+  analysis_path: active_algebra
+  public_key_parsed: yes
+
+Capability matrix
+  active_algebra: yes
+  passive_family_mode: no
+
+Executive summary
+  total_checks: 348
+  hit_count: 1
+  recovered_key_count: 1
+  critical_hits: 1
+  high_hits: 0
+  medium_hits: 0
+  low_hits: 0
+  why_no_recovery: recovery demonstrated
+
+Primary finding
+  module: tiny_public_key_multiple_scan
+  fault_name: Public key falls in a tiny scalar range
+  category: keygen
+  severity: critical
+  impact: the audited public key sits inside a tiny bounded range and is recoverable offline
+  confidence: Practically validated
+  validation_state: recovery_succeeded
+  heuristic_score: 100
+  mode: active_attack
+  recovery_class: key_recovery
+  recoverability_status: R5_trivial_or_lab_proven
+  scan_bound_bits = 16
+  recovered_private_key_decimal = 1337
+  flag = FLAG{1337}
+  impact = the audited public key sits inside a tiny bounded range and is recoverable offline
+  remediation: regenerate the long-term key from a full-entropy source and invalidate the weak key immediately
+  remediation: add key-generation self-tests that reject undersized or patterned private scalars
+
+Recovered private key
+  decimal: 1337
+  flag: FLAG{1337}
+
+Top risk findings
+  - tiny_public_key_multiple_scan | critical | R5_trivial_or_lab_proven | Public key falls in a tiny scalar range
+
+Remediation plan
+  [tiny_public_key_multiple_scan]
+    - regenerate the long-term key from a full-entropy source and invalidate the weak key immediately
+    - add key-generation self-tests that reject undersized or patterned private scalars
+
+Secondary finding count: 0

@@ -1,0 +1,18 @@
+FrogECCHunter recovered-key audit
+title: Valid secp256k1 tiny-range keygen playground (d=1337)
+mode: parser
+curve: secp256k1
+timestamp_unix: 1775533153
+
+[RECOVERED]
+module: tiny_public_key_multiple_scan
+fault_name: Public key falls in a tiny scalar range
+category: keygen
+severity: critical
+private_key_decimal: 1337
+flag: FLAG{1337}
+scan_bound_bits = 16
+recovered_private_key_decimal = 1337
+flag = FLAG{1337}
+impact = the audited public key sits inside a tiny bounded range and is recoverable offline
+
